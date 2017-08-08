@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Js," />
 
 
 
@@ -93,15 +93,17 @@
 
 
 
-<meta name="description" content="时间是一切财富中最宝贵的财富">
-<meta property="og:type" content="website">
-<meta property="og:title" content="dapengBlog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="简介GoJS是一个交互式图表js库，基于HTML5。 下载引入npm 下载 $ npm install gojs --save CDN引入 &amp;lt;script src=&amp;quot;https://cdnjs.cloudflare.com/ajax/libs/gojs/1.7.16/go-debug.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; ---">
+<meta name="keywords" content="Js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GoJS学习笔记(一)">
+<meta property="og:url" content="http://yoursite.com/2017/07/25/GoJS学习笔记一/index.html">
 <meta property="og:site_name" content="dapengBlog">
-<meta property="og:description" content="时间是一切财富中最宝贵的财富">
+<meta property="og:description" content="简介GoJS是一个交互式图表js库，基于HTML5。 下载引入npm 下载 $ npm install gojs --save CDN引入 &amp;lt;script src=&amp;quot;https://cdnjs.cloudflare.com/ajax/libs/gojs/1.7.16/go-debug.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; ---">
+<meta property="og:updated_time" content="2017-08-08T02:18:50.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="dapengBlog">
-<meta name="twitter:description" content="时间是一切财富中最宝贵的财富">
+<meta name="twitter:title" content="GoJS学习笔记(一)">
+<meta name="twitter:description" content="简介GoJS是一个交互式图表js库，基于HTML5。 下载引入npm 下载 $ npm install gojs --save CDN引入 &amp;lt;script src=&amp;quot;https://cdnjs.cloudflare.com/ajax/libs/gojs/1.7.16/go-debug.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; ---">
 
 
 
@@ -129,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/07/25/GoJS学习笔记一/"/>
 
 
 
 
 
-  <title>dapengBlog</title>
+  <title>GoJS学习笔记(一) | dapengBlog</title>
   
 
 
@@ -170,9 +172,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -275,9 +275,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -303,9 +303,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/25/GoJS学习笔记一/" itemprop="url">GoJS学习笔记(一)</a></h1>
+          <h1 class="post-title" itemprop="name headline">GoJS学习笔记(一)</h1>
         
 
         <div class="post-meta">
@@ -374,312 +372,82 @@
       
 
       
-        
-          <hr>
+        <hr>
 <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><pre><code>GoJS是一个交互式图表js库，基于HTML5。
 </code></pre><h2 id="下载引入"><a href="#下载引入" class="headerlink" title="下载引入"></a>下载引入</h2><pre><code>npm 下载 $ npm install gojs --save
 CDN引入 &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/gojs/1.7.16/go-debug.js&quot;&gt;&lt;/script&gt;
 ---
-</code></pre>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/07/25/GoJS学习笔记一/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+</code></pre><a id="more"></a>
+<h2 id="简单图表的绘制"><a href="#简单图表的绘制" class="headerlink" title="简单图表的绘制"></a>简单图表的绘制</h2><h3 id="创建一个图表"><a href="#创建一个图表" class="headerlink" title="创建一个图表"></a>创建一个图表</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//图表的DIV  需指定宽高</div><div class="line">&lt;div id=&quot;myDiagramDiv&quot;</div><div class="line">     style=&quot;width:400px; height:150px; background-color: #DAE4E4;&quot;&gt;&lt;/div&gt;</div><div class="line">//gojs实际上是在DIV中创建了一个Canvas元素，Canvas的高宽自动适配DIV的高宽。</div><div class="line">var $ = go.GraphObject.make; //GoJS定义的静态函数，简化代码</div><div class="line">var myDiagram = $(go.Diagram, &quot;myDiagramDiv&quot;); //创建一个图表</div></pre></td></tr></table></figure>
+<p><div id="myDiagramDiv" style="width:400px; height:150px; background-color: #DAE4E4;"></div></p>
+<h3 id="图表和模型"><a href="#图表和模型" class="headerlink" title="图表和模型"></a>图表和模型</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">var $ = go.GraphObject.make;</div><div class="line">var myDiagram =</div><div class="line">  $(go.Diagram, &quot;myDiagramDiv&quot;,</div><div class="line">    &#123;</div><div class="line">      initialContentAlignment: go.Spot.Center, // center Diagram contents</div><div class="line">      &quot;undoManager.isEnabled&quot;: true // enable Ctrl-Z to undo and Ctrl-Y to redo</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">var myModel = $(go.Model);</div><div class="line">// in the model data, each node is represented by a JavaScript object:</div><div class="line">myModel.nodeDataArray = [</div><div class="line">  &#123; key: &quot;Alpha&quot; &#125;,</div><div class="line">  &#123; key: &quot;Beta&quot; &#125;,</div><div class="line">  &#123; key: &quot;Gamma&quot; &#125;</div><div class="line">];</div><div class="line">myDiagram.model = myModel;</div></pre></td></tr></table></figure>
+<script src="/js/src/gojs.js"></script>
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <div>
+      
+        
+
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/22/MarkDown语法学习/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="dapeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="//o82zr1kfu.qnssl.com/@/image/59718c15e4b0d8bbedfd4623.jpg?imageView2/2/w/300">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="dapengBlog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/22/MarkDown语法学习/" itemprop="url">MarkDown基础语法学习</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-22T10:18:31+08:00">
-                2017-07-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/学习/" itemprop="url" rel="index">
-                    <span itemprop="name">学习</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/Js/" rel="tag"># Js</a>
           
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          <hr>
-<h2 id="标题："><a href="#标题：" class="headerlink" title="标题："></a>标题：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># 这是一级标题（会生成&lt;h1&gt;标签）</div><div class="line">这里是段落内容</div><div class="line">## 这里是二级标题（会生成&lt;h2&gt;标签）</div><div class="line">这里是段落内容</div><div class="line">...</div><div class="line">###### 这里是六级标题</div></pre></td></tr></table></figure>
-<hr>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/07/22/MarkDown语法学习/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/22/MarkDown语法学习/" rel="next" title="MarkDown基础语法学习">
+                <i class="fa fa-chevron-left"></i> MarkDown基础语法学习
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
 
-    <div>
-      
-    </div>
+          <span class="post-nav-divider"></span>
 
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/21/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="dapeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="//o82zr1kfu.qnssl.com/@/image/59718c15e4b0d8bbedfd4623.jpg?imageView2/2/w/300">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="dapengBlog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/21/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-21T14:58:34+08:00">
-                2017-07-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/07/21/hello-world/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -687,6 +455,10 @@ CDN引入 &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/gojs/1.7.1
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -707,8 +479,17 @@ CDN引入 &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/gojs/1.7.1
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="//o82zr1kfu.qnssl.com/@/image/59718c15e4b0d8bbedfd4623.jpg?imageView2/2/w/300"
@@ -770,6 +551,22 @@ CDN引入 &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/gojs/1.7.1
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载引入"><span class="nav-number">2.</span> <span class="nav-text">下载引入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#简单图表的绘制"><span class="nav-number">3.</span> <span class="nav-text">简单图表的绘制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建一个图表"><span class="nav-number">3.1.</span> <span class="nav-text">创建一个图表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图表和模型"><span class="nav-number">3.2.</span> <span class="nav-text">图表和模型</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -882,10 +679,10 @@ CDN引入 &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/gojs/1.7.1
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
 
-  
+
 
   
 
